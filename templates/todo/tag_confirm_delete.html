@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+  <div>
+    <h1>Delete tag</h1>
+    <p>Are u really want to delete a {{ tag }}?</p>
+    <form action="" method="post">
+      {% csrf_token %}
+
+      <input type="submit" value="Yes" class="btn btn-danger">
+      <a class="btn btn-secondary" href="{% url 'todo:tag' %}">No, thanks</a>
+    </form>
+  </div>
+{% endblock %}
